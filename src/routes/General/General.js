@@ -1,7 +1,7 @@
 import React from "react";
 
 const General = () => {
-    return(
+    return (
         <div>General</div>
     )
 }
