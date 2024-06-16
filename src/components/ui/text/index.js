@@ -1,6 +1,5 @@
 import Text from './Text';
-import TextCenter from './TextCenter';
+import TextCenter from './TextCenter'
 
-export default Text, (
-    TextCenter
-)
+export default Text;
+export   { TextCenter };
