@@ -3,6 +3,7 @@ import Navbar from './../../modules/navigation/Navbar';
 import classes from './../../style.module.scss';
 import Header from "../../modules/navigation/Header";
 import ContextData from './../../context/data/ContextData';
+import NewItem from "./modules/NewItem";
 
 const News = () => {
     const {stateData, dispatchData} = React.useContext(ContextData)
@@ -33,11 +34,7 @@ const News = () => {
                     <Header />
                     { news.map((elem, index) => {
                         return (
-                            <div key={index}>
-                                <div>{elem.title}</div>
-                                <div>{elem.description}</div>
-                                <div><img src = {elem.image}/></div>
-                            </div>
+                           <NewItem data={elem} key={index}/>
                         )
                     })}
                 </div>
