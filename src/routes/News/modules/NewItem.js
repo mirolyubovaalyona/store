@@ -7,19 +7,20 @@ import TextCenter from './../../../components/ui/text/index'
 const NewItem =({data})=>{
     return(
         <div  className={classes.news}>
+            <Image sizeWidth = "40%" >
+                <img src = {data.img}/>
+            </Image>
 
             <div className={classes.news_body}>
                 <Title>
                     <div>{data.title}</div>
                 </Title>
                 <TextCenter>
-                    {data.description}
+                    {data.sudtitle}
                 </TextCenter>
             </div>
                 
-            <Image sizeWidth = "40%" >
-                <img src = {data.image}/>
-            </Image>
+            
             
         </div>
     )

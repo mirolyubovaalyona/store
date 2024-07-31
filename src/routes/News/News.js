@@ -1,9 +1,8 @@
 import React from "react";
-import Navbar from './../../modules/navigation/Navbar';
-import classes from './../../style.module.scss';
-import Header from "../../modules/navigation/Header";
 import ContextData from './../../context/data/ContextData';
 import NewItem from "./modules/NewItem";
+import NET from "../../network";
+import Office from "../../layouts/office/Office";
 
 const News = () => {
     const {stateData, dispatchData} = React.useContext(ContextData)
@@ -11,7 +10,7 @@ const News = () => {
     React.useEffect(() => {
         const fetchNews = async() => {
             try {
-                const response = await fetch('http://127.0.0.1:3004/news')
+                const response = await fetch(`${NET.APP_URL}/news`)
                 if (response.status === 200 ) {
                     const result =  await response.json() // работает только если дожидаться ответ
                     dispatchData({
@@ -27,19 +26,13 @@ const News = () => {
     },[])
 
     return(
-        <div>
-            <div className={classes.main}>
-                <div className={classes.main_Navigation}><Navbar /></div>
-                <div className={classes.main_Content}>
-                    <Header />
-                    { news.map((elem, index) => {
-                        return (
-                           <NewItem data={elem} key={index}/>
-                        )
-                    })}
-                </div>
-            </div>           
-        </div>
+        <Office>
+           { news.map((elem, index) => {
+                return (
+                    <NewItem data={elem} key={index}/>
+                )
+            })}
+         </Office>
     )
 }
 export default News

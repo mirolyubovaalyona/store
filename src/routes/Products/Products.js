@@ -1,14 +1,11 @@
 import React from "react";
-import classes from './../../style.module.scss'
-import Navbar from './../../modules/navigation/Navbar';
-import Header from "../../modules/navigation/Header";
+import Office from "../../layouts/office/Office";
 
 const Products = () => {
     return(
-        <div className={classes.main}>
-            <div className={classes.main_Navigation}><Navbar /></div>
-            <div className={classes.main_Content}><Header /></div>
-        </div>
+       <Office>
+            <div>Products</div>
+       </Office>
     )
 }
 export default Products
