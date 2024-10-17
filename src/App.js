@@ -5,6 +5,7 @@ import General from './routes/General/General';
 import Shop from './routes/Shop/Shop';
 import News from './routes/News/News';
 import Products from './routes/Products/Products';
+import Video from './routes/Video/Video';
 import {  BrowserRouter ,  Routes,  Route} from "react-router-dom";
 import ContextData from './context/data/ContextData';
 import ReducerData from './context/data/ReducerData';
@@ -20,6 +21,7 @@ function App() {
           <Route path="shop" element={<Shop />} />
           <Route path="news" element={<News />} />
           <Route path="products" element={<Products />} />
+          <Route path="video" element={<Video />} />
         </Route>
       </Routes>
     </ContextData.Provider>

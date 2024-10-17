@@ -1,5 +1,5 @@
 import React from "react";
-import Office from '../../layouts/office/Office';
+import Office from "../../layouts/office/Office";
 
 const Shop = () => {
     return(

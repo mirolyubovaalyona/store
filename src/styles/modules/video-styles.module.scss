@@ -1,0 +1,35 @@
+@import "./../../variables.module.scss";
+
+.videoWafpper {
+    position: relative;
+    width: 700px;
+}
+
+.videoControls {
+    //position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: blue;
+}
+
+.videoControlsPlay {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: yellow;
+    justify-content: center;
+    align-items: center;
+}
+
+.videoControlsProgressBar {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    background: rgb(225, 0, 255);
+}
